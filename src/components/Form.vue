@@ -1,6 +1,6 @@
 <template>
   <div class="form">
-    <form action.preventDefault="submit">
+    <form id="form" action.preventDefault="submit">
       <h2>Shoot me a message!</h2>
       <input placeholder="Name" type="text">
       <input placeholder="Email" type="text">
@@ -13,7 +13,29 @@
 
 <script>
 export default {
-  name: 'Form'
+  name: 'Form',
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    formAnimation(){
+      var myForm = document.querySelector('#form');
+      console.log(myForm.children);
+      for(var i = 0; i < myForm.children.length - 1; i++){
+        (function(e){
+          setTimeout(() => {
+           myForm[e].style.transform = 'translate(0%)';
+           myForm[e].style.visibility = 'visible';
+          }, i * 1000);
+        }(i));
+      }
+    }
+  },
+  mounted() {
+    this.formAnimation();
+  }
 }
 </script>
 
@@ -45,6 +67,10 @@ export default {
       font-weight: bold;
       border-bottom: 2px solid white;
       color: white;
+      transform: translateY(300%);
+      visibility: hidden;
+      transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+      -webkit-transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
       &::placeholder {
         color: white;
         font-family: "t26-carbon", "Courier New", Courier, monospace;

@@ -14,9 +14,9 @@ export default {
       var headerText = 'Tenyson C. Partridge';
       var myHeader = document.querySelector('.header');
       for (var i = 0; i < headerText.length; i++){
-        (function(n) {
-          setTimeout(function(){
-            myHeader.innerHTML += headerText[n];
+        (function(e) {
+          setTimeout(() => {
+            myHeader.innerHTML += headerText[e];
           }, i * 100);
         }(i));
       }
