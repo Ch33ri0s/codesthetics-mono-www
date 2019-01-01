@@ -10,6 +10,12 @@
     </div>
     <div id="footer">
       <span>Made with <i class="fas fa-heart"></i></span>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Github</a></li>
+      </ul>
     </div>
   </div>
 </template>
@@ -58,6 +64,15 @@ export default {
   }
 }
 
+@keyframes slideBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 *,
 html,
 body {
@@ -67,6 +82,7 @@ body {
 }
 html, body {
   overflow: hidden;
+  -webkit-text-stroke: .35px white;
 }
 
 #app {
@@ -84,7 +100,7 @@ html, body {
 
 #nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -127,7 +143,7 @@ html, body {
 
 #footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -136,8 +152,50 @@ html, body {
     color: white;
     font-size: 12px;
     font-weight: lighter;
+    animation: slideBottom 2s ease;
     i {
       color: red;
+    }
+  }
+  ul {
+    display: flex;
+    animation: slideBottom 2s ease;
+    li {
+      padding-left: 15px;
+      padding-right: 15px;
+      a {
+        font-size: 12px;
+        position: relative;
+        font-weight: lighter;
+        text-decoration: none;
+        color: white;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: white;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.25s ease-in-out 0s;
+          transition: all 0.25s ease-in-out 0s;
+        }
+
+        &:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+        &:hover:after {
+          visibility: visible;
+        }
+      }
     }
   }
 }

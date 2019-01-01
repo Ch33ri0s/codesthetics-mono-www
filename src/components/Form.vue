@@ -2,10 +2,10 @@
   <div class="form">
     <form id="form" action.preventDefault="submit">
       <h2>Shoot me a message!</h2>
-      <input placeholder="Name" type="text">
-      <input placeholder="Email" type="text">
-      <input placeholder="Subject" type="text">
-      <input class="message" placeholder="Message" type="text">
+      <input placeholder="Name" type="text" required>
+      <input placeholder="Email" type="text" required>
+      <input placeholder="Subject" type="text" required>
+      <input class="message" placeholder="Message" type="text" required>
       <button class="btn">Shoot it</button>
     </form>
   </div>
@@ -22,8 +22,7 @@ export default {
   methods: {
     formAnimation(){
       var myForm = document.querySelector('#form');
-      console.log(myForm.children);
-      for(var i = 0; i < myForm.children.length - 1; i++){
+      for(var i = 0; i < myForm.children.length; i++){
         (function(e){
           setTimeout(() => {
            myForm[e].style.transform = 'translate(0%)';
@@ -62,15 +61,15 @@ export default {
       outline: none;
       border: none;
       width: 400px;
-      padding: 15px 20px 15px 10px;
+      padding: 20px 20px 20px 10px;
       font-size: 18px;
       font-weight: bold;
       border-bottom: 2px solid white;
       color: white;
       transform: translateY(300%);
       visibility: hidden;
-      transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
-      -webkit-transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+      transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
+      -webkit-transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
       &::placeholder {
         color: white;
         font-family: "t26-carbon", "Courier New", Courier, monospace;
@@ -84,12 +83,20 @@ export default {
   margin: 30px auto;
   font-size: 18px;
   background: white;
+  font-family: "t26-carbon", "Courier New", Courier, monospace;
+  font-weight: bold;
+  transform: translateY(300%);
+  visibility: hidden;
   border: none;
   outline: none;
   padding: 5px 50px 5px 50px;
+  transition: all .65s ease;
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')25 15, auto;	
+  }
+  &:active {
+    transform: scale(1, 1);
   }
 }
 

@@ -38,14 +38,15 @@ export default {
 .header {
   animation: slide 1s ease;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 48px;
+  font-family: 'Courier New', Courier, monospace;
 }
 .header, h3 {
   color: white;
   padding: 1rem;
 }
 h3 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: lighter;
   animation: slide 1s ease;
 }
