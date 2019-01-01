@@ -18,7 +18,24 @@
 export default {
   data() {
     return {};
-  }
+  },
+  methods: {
+    mouse() {
+      window.addEventListener('mousemove', function(e){
+        // console.log(e.clientX, e.clientY);
+        var xPos = e.clientX;
+        var yPos = e.clientY;
+        var box = document.createElement('div');
+        console.log(box);
+        box.className = 'box';
+        box.style.top = xPos + 'px';
+        box.style.left = yPos + 'px';
+      });
+    }
+  },
+  // mounted() {
+  //   this.mouse();
+  // }
 };
 </script>
 
@@ -134,6 +151,18 @@ html, body {
   height: 500px;
   -webkit-animation: flicker-in-2 2s linear both;
   animation: flicker-in-2 2s linear both;
+}
+
+.box {
+  display: absolute;
+  // position: relative;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: white;
+  z-index: 200;
+  // transition: all 1s ease;
 }
 
 @-webkit-keyframes flicker-in-2 {

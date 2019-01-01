@@ -13,7 +13,6 @@ export default {
       handleHeader() {
       var headerText = 'Tenyson C. Partridge';
       var myHeader = document.querySelector('.header');
-      console.log(myHeader);
       for (var i = 0; i < headerText.length; i++){
         (function(n) {
           setTimeout(function(){
@@ -38,13 +37,12 @@ export default {
 
 .header {
   animation: slide 1s ease;
-}
-span, h3 {
-  color: white;
-}
-span {
   font-weight: bold;
   font-size: 60px;
+}
+.header, h3 {
+  color: white;
+  padding: 1rem;
 }
 h3 {
   font-size: 48px;

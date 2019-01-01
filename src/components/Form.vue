@@ -1,11 +1,12 @@
 <template>
   <div class="form">
     <form action.preventDefault="submit">
+      <h2>Shoot me a message!</h2>
       <input placeholder="Name" type="text">
       <input placeholder="Email" type="text">
       <input placeholder="Subject" type="text">
-      <textarea placeholder="Message" id="" cols="30" rows="10"></textarea>
-      <button>Submit</button>
+      <input class="message" placeholder="Message" type="text">
+      <button class="btn">Shoot it</button>
     </form>
   </div>
 </template>
@@ -25,37 +26,45 @@ export default {
   height: 100%;
   justify-content: center;
   align-items: center;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
-  // flex-direction: column;
+  flex-direction: column;
   color: white;
   form {
-    width: 300px;
-    height: 100%;
-  }
-
-  form input {
-    outline: none;
-    border: none;
-    border-bottom: 2px solid white;
-    font-family: "t26-carbon", "Courier New", Courier, monospace;
-    font-weight: bolder;
-    padding: 10px 5px 10px 5px;
-    background: none;
-    width: 300px;
-    margin: 10px;
-    font-size: 18px;
-    color: white;
-    &::placeholder {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin: 20px auto;
+    }
+    input {
+      background: none;
+      font-family: "t26-carbon", "Courier New", Courier, monospace;
+      outline: none;
+      border: none;
+      width: 400px;
+      padding: 15px 20px 15px 10px;
       font-size: 18px;
+      font-weight: bold;
+      border-bottom: 2px solid white;
       color: white;
-      font-family: 't26-carbon', 'Courier New', Courier, monospace;
-      font-weight: lighter;
-      padding: 0;
-      margin: auto;
+      &::placeholder {
+        color: white;
+        font-family: "t26-carbon", "Courier New", Courier, monospace;
+        font-weight: lighter;
+        font-size: 16px;
+      }
     }
   }
 }
-
-
+.btn {
+  margin: 30px auto;
+  font-size: 18px;
+  background: white;
+  border: none;
+  outline: none;
+  padding: 5px 50px 5px 50px;
+  &:hover {
+    transform: scale(1.1, 1.1);
+    cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')25 15, auto;	
+  }
+}
 
 </style>
