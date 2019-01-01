@@ -6,7 +6,7 @@
       <input placeholder="Email" type="text" required>
       <input placeholder="Subject" type="text" required>
       <input class="message" placeholder="Message" type="text" required>
-      <button class="btn">Shoot it</button>
+      <button class="btn">Shoot!</button>
     </form>
   </div>
 </template>
