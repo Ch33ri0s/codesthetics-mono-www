@@ -50,4 +50,16 @@ h3 {
   font-weight: lighter;
   animation: slide 1s ease;
 }
+
+@media (max-width: 730px) {
+  .home {
+    padding-left: 50px;
+  }
+  .header {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
 </style>

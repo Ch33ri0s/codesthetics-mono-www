@@ -32,7 +32,6 @@ export default {
         var xPos = e.clientX;
         var yPos = e.clientY;
         var box = document.createElement('div');
-        console.log(box);
         box.className = 'box';
         box.style.top = xPos + 'px';
         box.style.left = yPos + 'px';
@@ -86,16 +85,21 @@ html, body {
 }
 
 #app {
-  // font-family: 'Courier New', Helvetica, Arial, sans-serif;
   font-family: "t26-carbon", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background: black;
   background: black;
   width: 100vw;
   height: 100vh;
   padding-right: 200px;
   padding-left: 200px;
+  @media (max-width: 1000px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @media (max-width: 950px) {
+    padding: 0;
+  }
 }
 
 #nav {
@@ -104,6 +108,8 @@ html, body {
   align-items: center;
   width: 100%;
   height: 100px;
+  padding-left: 2px;
+  padding-right: 2px;
 
   a {
     color: white;
@@ -143,10 +149,14 @@ html, body {
 
 #footer {
   display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100px;
+  padding-left: 2px;
+  padding-right: 2px;
 
   span {
     color: white;
@@ -156,13 +166,16 @@ html, body {
     i {
       color: red;
     }
+    @media (max-width: 450px) {
+      display: none;
+    }
   }
   ul {
     display: flex;
     animation: slideBottom 2s ease;
     li {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
       a {
         font-size: 12px;
         position: relative;

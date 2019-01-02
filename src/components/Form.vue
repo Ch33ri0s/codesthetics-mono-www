@@ -32,18 +32,15 @@ export default {
       }
     },
     handleButtonClick() {
-      document.querySelector('.btn').addEventListener('click', function(e) {
-        var rect = e.target.getBoundingClientRect();
-        var posX = e.clientX - rect.left;
-        var posY = e.clientY - rect.top;
+      document.querySelector('.btn').addEventListener('click', function(event) {
+        var rect = event.target.getBoundingClientRect();
+        var posX = event.clientX - rect.left;
+        var posY = event.clientY - rect.top;
         var bullet = document.createElement('div');
         bullet.classList.add('bullet');
         this.appendChild(bullet);
         bullet.style.top += posY + 'px';
         bullet.style.left += posX + 'px';
-
-        console.log(posX, posY);
-        console.log(bullet.parentElement);
       });
     }
   },
@@ -89,6 +86,10 @@ export default {
       visibility: hidden;
       transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
       -webkit-transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
+      @media (max-width: 450px) {
+        width: 250px;
+        font-size: 16px;
+      }
       &::placeholder {
         color: white;
         font-family: "t26-carbon", "Courier New", Courier, monospace;
