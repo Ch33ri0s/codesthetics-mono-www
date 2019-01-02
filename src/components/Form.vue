@@ -30,10 +30,26 @@ export default {
           }, i * 1000);
         }(i));
       }
+    },
+    handleButtonClick() {
+      document.querySelector('.btn').addEventListener('click', function(e) {
+        var rect = e.target.getBoundingClientRect();
+        var posX = e.clientX - rect.left;
+        var posY = e.clientY - rect.top;
+        var bullet = document.createElement('div');
+        bullet.classList.add('bullet');
+        this.appendChild(bullet);
+        bullet.style.top += posY + 'px';
+        bullet.style.left += posX + 'px';
+
+        console.log(posX, posY);
+        console.log(bullet.parentElement);
+      });
     }
   },
   mounted() {
     this.formAnimation();
+    this.handleButtonClick();
   }
 }
 </script>
@@ -43,6 +59,7 @@ export default {
 
 .form {
   display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -52,10 +69,12 @@ export default {
   form {
     display: flex;
     flex-direction: column;
+    position: relative;
     h2 {
       margin: 20px auto;
     }
     input {
+      position: relative;
       background: none;
       font-family: "t26-carbon", "Courier New", Courier, monospace;
       outline: none;
@@ -80,6 +99,7 @@ export default {
   }
 }
 .btn {
+  position: relative;
   margin: 30px auto;
   font-size: 18px;
   background: white;
@@ -93,10 +113,33 @@ export default {
   transition: all .65s ease;
   &:hover {
     transform: scale(1.1, 1.1);
-    cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')25 15, auto;	
+    cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')18.9 18.9, auto;	
   }
   &:active {
     transform: scale(1, 1);
+  }
+  .bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: url('../assets/hole.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transform: scale(1, 1);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:before {
+      transform: scale(1.5, 1.5);
+    }
+    &:after {
+      transform: scale(1, 1);
+    }
   }
 }
 
