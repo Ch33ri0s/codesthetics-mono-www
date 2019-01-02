@@ -27,7 +27,7 @@ export default {
           setTimeout(() => {
            myForm[e].style.transform = 'translate(0%)';
            myForm[e].style.visibility = 'visible';
-          }, i * 1000);
+          }, i * 700);
         }(i));
       }
     },
@@ -84,10 +84,10 @@ export default {
       color: white;
       transform: translateY(300%);
       visibility: hidden;
-      transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
-      -webkit-transition: all .65s cubic-bezier(0.215, 0.610, 0.355, 1);
+      transition: all .45s cubic-bezier(0.215, 0.610, 0.355, 1);
+      -webkit-transition: all .45s cubic-bezier(0.215, 0.610, 0.355, 1);
       @media (max-width: 450px) {
-        width: 250px;
+        width: 275px;
         font-size: 16px;
       }
       &::placeholder {
@@ -101,7 +101,7 @@ export default {
 }
 .btn {
   position: relative;
-  margin: 30px auto;
+  margin: 50px auto;
   font-size: 18px;
   background: white;
   font-family: "t26-carbon", "Courier New", Courier, monospace;
@@ -111,7 +111,7 @@ export default {
   border: none;
   outline: none;
   padding: 5px 50px 5px 50px;
-  transition: all .65s ease;
+  transition: all .45s ease;
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')18.9 18.9, auto;	

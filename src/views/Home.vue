@@ -37,17 +37,19 @@ export default {
 
 .header {
   animation: slide 1s ease;
+  padding: 0;
   font-weight: bold;
   font-size: 48px;
   font-family: 'Courier New', Courier, monospace;
 }
 .header, h3 {
   color: white;
-  padding: 1rem;
 }
 h3 {
   font-size: 40px;
+  padding-bottom: 20px;
   font-weight: lighter;
+  border-bottom: 1px solid white;
   animation: slide 1s ease;
 }
 
@@ -60,6 +62,12 @@ h3 {
   }
   h3 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    padding-left: 20px;
   }
 }
 </style>

@@ -157,6 +157,10 @@ html, body {
   height: 100px;
   padding-left: 2px;
   padding-right: 2px;
+  @media (max-width: 450px) {
+    justify-content: center;
+    padding: 0;
+  }
 
   span {
     color: white;
@@ -182,6 +186,9 @@ html, body {
         font-weight: lighter;
         text-decoration: none;
         color: white;
+        @media (max-width: 450px) {
+          font-size: 14px;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -222,6 +229,9 @@ html, body {
   height: 500px;
   -webkit-animation: flicker-in-2 2s linear both;
   animation: flicker-in-2 2s linear both;
+  @media (max-width: 450px) {
+    height: 600px;
+  }
 }
 
 .box {
