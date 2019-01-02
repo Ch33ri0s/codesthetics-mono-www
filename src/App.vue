@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/"><i class="fas fa-home"></i></router-link>
       <router-link to="/work"><i class="fas fa-image"></i></router-link>
-      <router-link to="/contact"><i class="fas fa-comment"></i></router-link>
+      <router-link to="/contact"><i class="fas fa-envelope"></i></router-link>
     </div>
     <div class="body-wrapper">
       <router-view/>
