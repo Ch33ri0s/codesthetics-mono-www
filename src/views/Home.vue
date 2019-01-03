@@ -43,13 +43,13 @@ export default {
   font-family: 'Courier New', Courier, monospace;
 }
 .header, h3 {
-  color: white;
+  color: #424242;
 }
 h3 {
   font-size: 40px;
   padding-bottom: 20px;
   font-weight: lighter;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #424242;
   animation: slide 1s ease;
 }
 

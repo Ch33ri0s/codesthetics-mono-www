@@ -2,10 +2,10 @@
   <div class="form">
     <form id="form" action.preventDefault="submit">
       <h2>Shoot me a message!</h2>
-      <input placeholder="Name" type="text" required>
-      <input placeholder="Email" type="text" required>
-      <input placeholder="Subject" type="text" required>
-      <input class="message" placeholder="Message" type="text" required>
+      <input placeholder="Name" type="text">
+      <input placeholder="Email" type="text">
+      <input placeholder="Subject" type="text">
+      <input class="message" placeholder="Message" type="text">
       <button class="btn">Shoot!</button>
     </form>
   </div>
@@ -62,7 +62,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: #424242;
   form {
     display: flex;
     flex-direction: column;
@@ -80,8 +80,8 @@ export default {
       padding: 20px 20px 20px 10px;
       font-size: 18px;
       font-weight: bold;
-      border-bottom: 2px solid white;
-      color: white;
+      border-bottom: 2px solid #424242;
+      color: #424242;
       transform: translateY(300%);
       visibility: hidden;
       transition: all .45s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -91,7 +91,7 @@ export default {
         font-size: 16px;
       }
       &::placeholder {
-        color: white;
+        color: #424242;
         font-family: "t26-carbon", "Courier New", Courier, monospace;
         font-weight: lighter;
         font-size: 16px;
@@ -101,16 +101,18 @@ export default {
 }
 .btn {
   position: relative;
-  margin: 50px auto;
+  margin: 40px auto;
   font-size: 18px;
-  background: white;
+  background: #0336FF;
+  color: #f2f2f2;
   font-family: "t26-carbon", "Courier New", Courier, monospace;
   font-weight: bold;
+  border-radius: 5px;
   transform: translateY(300%);
   visibility: hidden;
   border: none;
   outline: none;
-  padding: 5px 50px 5px 50px;
+  padding: 10px 50px 10px 50px;
   transition: all .45s ease;
   &:hover {
     transform: scale(1.1, 1.1);

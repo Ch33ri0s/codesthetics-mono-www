@@ -81,14 +81,15 @@ body {
 }
 html, body {
   overflow: hidden;
-  -webkit-text-stroke: .35px white;
+  -webkit-text-stroke: .35px #616161;
 }
 
 #app {
   font-family: "t26-carbon", "Courier New", Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: black;
+  // background: black;
+  background: #212121;
   width: 100vw;
   height: 100vh;
   padding-right: 200px;
@@ -112,7 +113,7 @@ html, body {
   padding-right: 2px;
 
   a {
-    color: white;
+    color: #757575;
     position: relative;
     text-decoration: none;
     font-size: 40px;
@@ -128,7 +129,7 @@ html, body {
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      background-color: white;
+      background-color: #FFD600;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -163,12 +164,11 @@ html, body {
   }
 
   span {
-    color: white;
+    color: #616161;
     font-size: 12px;
-    font-weight: lighter;
     animation: slideBottom 2s ease;
     i {
-      color: red;
+      color: #FF0266;
     }
     @media (max-width: 450px) {
       display: none;
@@ -176,6 +176,9 @@ html, body {
   }
   ul {
     display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     animation: slideBottom 2s ease;
     li {
       padding-left: 10px;
@@ -183,9 +186,8 @@ html, body {
       a {
         font-size: 12px;
         position: relative;
-        font-weight: lighter;
         text-decoration: none;
-        color: white;
+        color: #616161;
         @media (max-width: 450px) {
           font-size: 14px;
         }
@@ -199,7 +201,7 @@ html, body {
           right: 0;
           margin-left: auto;
           margin-right: auto;
-          background-color: white;
+          background-color: #FF0266;
           visibility: hidden;
           -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -224,9 +226,12 @@ html, body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 5px solid white;
+  border: 5px solid #424242;
+  border-radius: 20px;
+  background: #FFD600;
   width: 100%;
   height: 500px;
+  // height: 100%;
   -webkit-animation: flicker-in-2 2s linear both;
   animation: flicker-in-2 2s linear both;
   @media (max-width: 450px) {
@@ -241,7 +246,7 @@ html, body {
   left: 0;
   width: 10px;
   height: 10px;
-  background: white;
+  background: #f2f2f2;
   z-index: 200;
   // transition: all 1s ease;
 }
