@@ -113,6 +113,8 @@ html, body {
   height: 100px;
   padding-left: 2px;
   padding-right: 2px;
+  max-width: 1400px;
+  margin: auto;
 
   a {
     color: #757575;
@@ -131,7 +133,7 @@ html, body {
       right: 0;
       margin-left: auto;
       margin-right: auto;
-      background-color: #FFD600;
+      background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -158,6 +160,8 @@ html, body {
   align-items: center;
   width: 100%;
   height: 100px;
+  max-width: 1400px;
+  margin: auto;
   padding-left: 2px;
   padding-right: 2px;
   @media (max-width: 450px) {
@@ -179,7 +183,7 @@ html, body {
   ul {
     display: flex;
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     animation: slideBottom 2s ease;
     li {
@@ -203,7 +207,7 @@ html, body {
           right: 0;
           margin-left: auto;
           margin-right: auto;
-          background-color: #FF0266;
+          background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
           visibility: hidden;
           -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -230,8 +234,11 @@ html, body {
   flex-direction: column;
   border: 5px solid #424242;
   border-radius: 20px;
-  background: #FFD600;
+  background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .35);
+  margin: auto;
   width: 100%;
+  max-width: 1400px;
   height: 70%;
   -webkit-animation: flicker-in-2 2s linear both;
   animation: flicker-in-2 2s linear both;

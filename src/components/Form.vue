@@ -103,7 +103,7 @@ export default {
   position: relative;
   margin: 40px auto;
   font-size: 18px;
-  background: #0336FF;
+  background: #4DD0E1;
   color: #f2f2f2;
   font-family: "t26-carbon", "Courier New", Courier, monospace;
   font-weight: bold;
