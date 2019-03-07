@@ -82,6 +82,8 @@ body {
 html, body {
   overflow: hidden;
   -webkit-text-stroke: .35px #616161;
+  width: 100vw;
+  height: 100vh;
 }
 
 #app {
@@ -230,13 +232,9 @@ html, body {
   border-radius: 20px;
   background: #FFD600;
   width: 100%;
-  height: 500px;
-  // height: 100%;
+  height: 70%;
   -webkit-animation: flicker-in-2 2s linear both;
   animation: flicker-in-2 2s linear both;
-  @media (max-width: 450px) {
-    height: 600px;
-  }
 }
 
 .box {
