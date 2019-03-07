@@ -231,6 +231,7 @@ html, body {
 .body-wrapper {
   display: flex;
   justify-content: center;
+  overflow: hidden;
   flex-direction: column;
   border: 5px solid #424242;
   border-radius: 20px;
