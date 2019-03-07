@@ -4,12 +4,15 @@
       <router-link to="/"><i class="fas fa-home"></i></router-link>
       <router-link to="/work"><i class="fas fa-image"></i></router-link>
       <router-link to="/contact"><i class="fas fa-envelope"></i></router-link>
+      <router-link to="/about"><i class="fas fa-user"></i></router-link>
     </div>
     <div class="body-wrapper">
-      <router-view/>
+      <transition name="slide-fade" mode="out-in">
+        <router-view/>
+      </transition>
     </div>
     <div id="footer">
-      <span>Made with <i class="fas fa-heart"></i></span>
+      <span>Made with <i class="fas fa-heart"></i> by Tenyson Partridge {{year}}</span>
       <ul>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
@@ -23,7 +26,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      year: (new Date()).getFullYear()
+    }
   },
   methods: {
     mouse() {
@@ -70,6 +75,18 @@ export default {
   to {
     transform: translateY(0%);
   }
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 
 *,
@@ -171,7 +188,7 @@ html, body {
 
   span {
     color: #616161;
-    font-size: 12px;
+    font-size: 14px;
     animation: slideBottom 2s ease;
     i {
       color: #FF0266;
@@ -190,7 +207,7 @@ html, body {
       padding-left: 10px;
       padding-right: 10px;
       a {
-        font-size: 12px;
+        font-size: 14px;
         position: relative;
         text-decoration: none;
         color: #616161;
