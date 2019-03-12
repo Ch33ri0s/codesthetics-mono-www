@@ -12,7 +12,7 @@
       </transition>
     </div>
     <div id="footer">
-      <span>Made with <i class="fas fa-heart"></i> by Tenyson Partridge {{year}}</span>
+      <span>Made with <i class="fas fa-heart"></i> {{year}}</span>
       <ul>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
@@ -252,7 +252,9 @@ html, body {
   flex-direction: column;
   border: 5px solid #424242;
   border-radius: 20px;
-  background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
+
+  // background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
+  background: linear-gradient(-45deg, #23A6D5, #23D5AB);
   box-shadow: 0 0 30px rgba(0, 0, 0, .35);
   margin: auto;
   width: 100%;

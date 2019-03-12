@@ -1,9 +1,10 @@
 <template>
   <div class="work">
     <div class="project-carousel">
-      <div v-for="(project, index) in projects" :key="index" class="project">{{project.title}}
+      <div v-for="(project, index) in projects" :key="index" class="project">
+        <span class="project-title">{{project.title}}</span>
         <div class="project-img-wrapper">
-          <img class="project-img" :src="project.url">
+          <img class="project-img" :src="project.image">
         </div>
       </div>
     </div>
@@ -18,19 +19,20 @@ export default {
   data () {
     return {
       projects: [
-        { title: 'test', url: "https://images.pexels.com/photos/1068989/pexels-photo-1068989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-        { title: 'test', url: "https://images.pexels.com/photos/1068989/pexels-photo-1068989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-        { title: 'test', url: "https://images.pexels.com/photos/1068989/pexels-photo-1068989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+        { title: 'test', image: "../assets/logo.png"},
+        { title: 'test', image: "https://images.pexels.com/photos/1068989/pexels-photo-1068989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+        { title: 'test', image: "https://images.pexels.com/photos/1068989/pexels-photo-1068989.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
       ]
     }
   },
   mounted() {
+    console.log(this.projects.image);
     const elem = document.querySelector('.project-carousel');
     const projectCarousel = new Flickity(elem, {
       setGallerySize: true,
       pageDots: true,
       wrapAround: true,
-      freeScroll: true,
+      freeScroll: false,
       fullscreem: true,
       prevNextButtons: true,
       cellAlign: 'left',
@@ -42,15 +44,19 @@ export default {
 <style lang="scss">
 
 .project-carousel {
+  width: 100%;
+  height: 100%;
   .project {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     margin-right: 20px;
     .project-img-wrapper {
-      width: 500px;
-      height: 500px;
+      width: 100%;
+      // height: 100%;
       img {
         width: 100%;
         height: 100%;
