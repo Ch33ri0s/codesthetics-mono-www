@@ -22,7 +22,7 @@ export default {
   methods: {
     formAnimation(){
       var myForm = document.querySelector('#form');
-      for(var i = 0; i < myForm.children.length; i++){
+      for(let i = 0; i < myForm.children.length - 1; i++){
         (function(e){
           setTimeout(() => {
            myForm[e].style.transform = 'translate(0%)';
@@ -106,6 +106,7 @@ export default {
   background: #4DD0E1;
   color: #f2f2f2;
   font-family: "t26-carbon", "Courier New", Courier, monospace;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   font-weight: bold;
   border-radius: 5px;
   transform: translateY(300%);
@@ -116,10 +117,11 @@ export default {
   transition: all .45s ease;
   &:hover {
     transform: scale(1.1, 1.1);
-    cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')18.9 18.9, auto;	
+    cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')18.9 18.9, auto;
   }
   &:active {
     transform: scale(1, 1);
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .16);
   }
   .bullet {
     position: absolute;

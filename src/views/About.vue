@@ -10,9 +10,7 @@
           SCSS, Vue, React, and some C#.
         </p>
       </div>
-      <div class="image-wrapper">
-        <img src="../assets/tcp.jpg" alt="">
-      </div>
+      <div class="image-wrap"></div>
     </div>
   </div>
 </template>
@@ -25,23 +23,28 @@ export default {
 
 <style lang="scss">
 .about {
+  height: 100%;
+  width: 100%;
   .content-wrap {
     display: flex;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
     .text-wrap {
       display: flex;
+      position: relative;
       flex-direction: column;
-      max-width: 300px;
-      height: 100%;
+      width: 300px;
+      z-index: 1;
     }
-    .image-wrapper {
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    .image-wrap {
+      width: 300px;
+      height: 100px;
+      background: url('../assets/tcp.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 }
