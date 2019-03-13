@@ -23,9 +23,10 @@ export default {
     const elem = document.querySelector('.project-carousel');
     const projectCarousel = new Flickity(elem, {
       pageDots: false,
-      // freeScroll: false,
+      // freeScroll: true,
       wrapAround: true,
       fullscreen: true,
+      contain: true,
       prevNextButtons: false,
       cellAlign: 'left',
     });     
@@ -34,13 +35,14 @@ export default {
 </script>
 
 <style lang="scss">
+
 .project-carousel {
   background: rgba(0, 0, 0, .1);
   width: 100%;
-  height: 100%;
   .project {
+    display: block;
     width: 100%;
-    height: 600px;
+    // height: 600px;
     img {
       display: block;
       max-height: 100%;
