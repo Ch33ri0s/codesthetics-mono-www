@@ -25,9 +25,9 @@ export default {
       for(let i = 0; i < myForm.children.length - 1; i++){
         (function(e){
           setTimeout(() => {
-           myForm[e].style.transform = 'translate(0%)';
-           myForm[e].style.visibility = 'visible';
-          }, i * 700);
+            myForm[e].style.transform = 'translate(0%)';
+            myForm[e].style.visibility = 'visible';
+          }, i * 300);
         }(i));
       }
     },

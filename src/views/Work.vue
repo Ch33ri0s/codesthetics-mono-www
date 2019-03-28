@@ -23,10 +23,11 @@ export default {
     const elem = document.querySelector('.project-carousel');
     const projectCarousel = new Flickity(elem, {
       pageDots: false,
+      autoPlay: true,
       // freeScroll: true,
       wrapAround: true,
       fullscreen: true,
-      contain: true,
+      // contain: true,
       prevNextButtons: false,
       cellAlign: 'left',
     });     
