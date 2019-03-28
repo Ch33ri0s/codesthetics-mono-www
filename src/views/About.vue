@@ -1,17 +1,7 @@
 <template>
   <div class="about">
-    <div class="content-wrapper">
-      <div class="text-wrap">
-        <div class="title">Hello Stranger!</div>
-        <p>
-          Not everybody can say they love to code AND design.  And yes, I'm human.  Also an avid gamer,
-          reader, tech enthusiast, and design minimalist with years of experience in Adobe Photoshop, 
-          Adobe Illustrator, and Adobe XD.  Proud developer with a deep understanding of JavaScript,
-          SCSS, Vue, React, and some C#.
-        </p>
-      </div>
-      <div class="image-wrap"></div>
-    </div>
+    <h2>UI/UX Developer</h2>
+    <p>Developer, designer, gamer, tech enthusiast and computer hardware fanatic.  I've been a computer geek since I was 8 years old.</p>
   </div>
 </template>
 
@@ -23,29 +13,12 @@ export default {
 
 <style lang="scss">
 .about {
-  height: 100%;
-  width: 100%;
-  .content-wrap {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-    position: relative;
-    .text-wrap {
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      width: 300px;
-      z-index: 1;
-    }
-    .image-wrap {
-      width: 300px;
-      height: 100px;
-      background: url('../assets/tcp.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
+  background:white;
 }
 </style>
