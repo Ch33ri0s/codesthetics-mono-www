@@ -35,6 +35,11 @@ export default {
 </script>
 
 <style lang="scss">
+.work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .project-carousel {
   background: rgba(0, 0, 0, .1);
