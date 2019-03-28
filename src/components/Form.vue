@@ -1,11 +1,11 @@
 <template>
   <div class="form">
-    <form action="https://formspree.io/your@email.com" method="POST" name="contact" id="form">
+    <form action.preventDefault="https://formspree.io/your@email.com" method="POST" name="contact" id="form">
       <h2>Shoot me a message!</h2>
-      <input placeholder="Name" type="name" name="name">
-      <input placeholder="Email" type="email" name="email">
-      <input placeholder="Subject" type="text" name="subject">
-      <input class="message" placeholder="Message" type="text" name="message">
+      <input placeholder="Name" type="name" name="name" required>
+      <input placeholder="Email" type="email" name="email" required>
+      <input placeholder="Subject" type="text" name="subject" required>
+      <input class="message" placeholder="Message" type="text" name="message" required>
       <button type="submit" value="Send" class="btn">Shoot!</button>
     </form>
   </div>
