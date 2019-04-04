@@ -1,6 +1,6 @@
 <template>
   <div class="form">
-    <form name="contact" id="form" method="POST" netlify>
+    <form name="contact" id="form" method="POST" action="https://formspree.io/tenysonpartridge@gmail.com">
       <h2>Shoot me a message!</h2>
       <input placeholder="Name" type="name" name="name" required>
       <input placeholder="Email" type="email" name="email" required>

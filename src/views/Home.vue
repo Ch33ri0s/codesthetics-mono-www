@@ -22,6 +22,9 @@ export default {
       }
     }
   },
+  openWindow() {
+    window.confirm('test');
+  },
   mounted() {
     this.handleHeader();
   }
