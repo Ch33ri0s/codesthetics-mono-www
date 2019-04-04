@@ -2,6 +2,7 @@
   <div class="home">
     <span class="header"></span>
     <h3>UI/UX Developer</h3>
+    <h1>HOME</h1>
   </div>
 </template>
 
@@ -34,12 +35,24 @@ export default {
 <style lang="scss">
 
 .home {
+  position: relative;
   width: 100%;
   height: 100%;
   padding-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  h1 {
+    position: absolute;
+    color: rgba(0, 0, 0, .02);
+    font-size: 35vw;
+    left: 10%;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none;
+  }
 }
 
 .header {

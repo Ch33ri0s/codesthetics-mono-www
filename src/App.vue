@@ -74,10 +74,10 @@ export default {
 }
 
 .slide-fade-enter-active {
-  transition: all .2s ease;
+  transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .slide-fade-leave-active {
-  transition: all .6s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
@@ -95,14 +95,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 html, body {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
 
 #app {
   font-family: "t26-carbon", "Courier New", Courier, monospace;
-  background: #212121;
+  background: radial-gradient(#424242, #212121);
   width: 100vw;
   height: 100vh;
   padding-right: 200px;
@@ -126,14 +125,20 @@ html, body {
   padding-right: 2px;
   max-width: 1400px;
   margin: auto;
-
+  img {
+    width: 50px;
+    height: 50px;
+  }
   a {
     color: #757575;
     position: relative;
     text-decoration: none;
     font-size: 40px;
-    animation: slideTop 2s ease;
-    transition: all 1s ease;
+    animation: slideTop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+      color: lighten($color: #757575, $amount: 30%);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -181,7 +186,7 @@ html, body {
   }
 
   span {
-    color: #616161;
+    color: #757575;
     font-size: 14px;
     animation: slideBottom 2s ease;
     i {
@@ -203,8 +208,9 @@ html, body {
       a {
         font-size: 14px;
         position: relative;
+        font-weight: bolder;
         text-decoration: none;
-        color: #616161;
+        color: #757575;
         @media (max-width: 450px) {
           font-size: 14px;
         }
@@ -222,8 +228,8 @@ html, body {
           visibility: hidden;
           -webkit-transform: scaleX(0);
           transform: scaleX(0);
-          -webkit-transition: all 0.25s ease-in-out 0s;
-          transition: all 0.25s ease-in-out 0s;
+          -webkit-transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+          transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
         }
 
         &:hover:before {
@@ -243,8 +249,6 @@ html, body {
   overflow: hidden;
   border: 5px solid #424242;
   border-radius: 20px;
-
-  // background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
   background: linear-gradient(-45deg, #23A6D5, #23D5AB);
   box-shadow: 0 0 30px rgba(0, 0, 0, .35);
   margin: auto;
@@ -257,14 +261,12 @@ html, body {
 
 .box {
   display: absolute;
-  // position: relative;
   top: 0;
   left: 0;
   width: 10px;
   height: 10px;
   background: #f2f2f2;
   z-index: 200;
-  // transition: all 1s ease;
 }
 
 @-webkit-keyframes flicker-in-2 {
@@ -273,27 +275,21 @@ html, body {
   }
   10% {
     opacity: 0;
-    // box-shadow: none;
   }
   10.1% {
     opacity: 1;
-    // box-shadow: none;
   }
   10.2% {
     opacity: 0;
-    // box-shadow: none;
   }
   20% {
     opacity: 0;
-    // box-shadow: none;
   }
   20.1% {
     opacity: 1;
-    // box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
   }
   20.6% {
     opacity: 0;
-    // box-shadow: none;
   }
   30% {
     opacity: 0;

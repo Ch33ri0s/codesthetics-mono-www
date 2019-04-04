@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 .work {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 100%;

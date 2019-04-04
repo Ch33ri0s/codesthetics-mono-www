@@ -114,7 +114,7 @@ export default {
   border: none;
   outline: none;
   padding: 10px 50px 10px 50px;
-  transition: all .45s ease;
+  transition: all .45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: url('https://img.icons8.com/material-two-tone/48/000000/accuracy.png')18.9 18.9, auto;
