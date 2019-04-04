@@ -33,7 +33,6 @@ export default {
   methods: {
     mouse() {
       window.addEventListener('mousemove', function(e){
-        // console.log(e.clientX, e.clientY);
         var xPos = e.clientX;
         var yPos = e.clientY;
         var box = document.createElement('div');
@@ -43,9 +42,6 @@ export default {
       });
     }
   },
-  // mounted() {
-  //   this.mouse();
-  // }
 };
 </script>
 
@@ -95,19 +91,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html, body {
   overflow: hidden;
-  -webkit-text-stroke: .35px #616161;
   width: 100vw;
   height: 100vh;
 }
 
 #app {
   font-family: "t26-carbon", "Courier New", Courier, monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  // background: black;
   background: #212121;
   width: 100vw;
   height: 100vh;
@@ -246,10 +240,7 @@ html, body {
 }
 
 .body-wrapper {
-  display: flex;
-  justify-content: center;
   overflow: hidden;
-  flex-direction: column;
   border: 5px solid #424242;
   border-radius: 20px;
 
@@ -526,5 +517,7 @@ html, body {
     // box-shadow: 0 0 50px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.25), 0 0 110px rgba(255, 255, 255, .15), 0 0 100px rgba(255, 255, 255, 0.1);
   }
 }
+
+
 
 </style>

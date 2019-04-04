@@ -24,10 +24,8 @@ export default {
     const projectCarousel = new Flickity(elem, {
       pageDots: false,
       autoPlay: true,
-      // freeScroll: true,
       wrapAround: true,
-      fullscreen: true,
-      // contain: true,
+      contain: true,
       prevNextButtons: false,
       cellAlign: 'left',
     });     
@@ -40,15 +38,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
 }
-
 .project-carousel {
   background: rgba(0, 0, 0, .1);
   width: 100%;
   .project {
     display: block;
     width: 100%;
-    // height: 600px;
     img {
       display: block;
       max-height: 100%;
