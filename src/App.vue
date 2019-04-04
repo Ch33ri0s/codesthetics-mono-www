@@ -136,8 +136,11 @@ html, body {
     font-size: 40px;
     animation: slideTop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &.router-link-exact-active  {
+      color: lighten($color: #757575, $amount: 35%);
+    }
     &:hover {
-      color: lighten($color: #757575, $amount: 30%);
+      color: lighten($color: #757575, $amount: 35%);
     }
     &:before {
       content: "";

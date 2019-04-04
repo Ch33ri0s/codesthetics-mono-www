@@ -2,9 +2,10 @@
   <div class="about">
     <h1>ABOUT</h1>
     <div class="textwrapper">
-      <h2>Hello, my name is Tenyson!</h2>
-      <p>I'm obsessed with creating and building awesome projects.  At 13, I introduced myself to JASS(Which is similar to C++) and used it inside the Warcraft 3 Custom Map Editor.  A couple years ago I got a little curious with web development and have been loving it ever since!</p>
+      <h2>Hi! I'm Tenyson.</h2>
+      <p>A tech nerd, PC Builder, diehard developer, avid gamer, passionate designer, Utah Jazz fanatic, and I'm always striving to live a healthy lifestyle.  I love people, collaborating, and building valuable relationships.</p>
     </div>
+    <div class="img-wrapper"><img src="../assets/tenyson_edited.jpg" alt="tenyson"></div>
   </div>
 </template>
 
@@ -22,13 +23,31 @@ export default {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  width: 600px;
   margin: auto;
   overflow: hidden;
+  .img-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: .2;
+    }
+  }
   h1 {
     position: absolute;
     color: rgba(0, 0, 0, .02);
     font-size: 35vw;
+    bottom: 0;
+    top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     left: 5%;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
@@ -37,13 +56,15 @@ export default {
     -webkit-touch-callout: none;
   }
   .textwrapper {
-    background:linear-gradient(to right, rgba(0, 0, 0, .45), rgba(0, 0, 0, .35), rgba(0, 0, 0, .45));
+    background: rgba;
     border-radius: 20px;
     padding: 20px;
     color: white;
-    width: 100%;
+    width: 400px;
+    background: #212121;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .35);
     max-width: 100%;
-    height: 300px;
+    height: 200px;
     h2 {
       width: 500px;
       max-width: 100%;
@@ -53,7 +74,8 @@ export default {
       margin-top: 20px;
       line-height: 1.3;
       width: 500px;
-      text-align: left;
+      text-align: justify;
+      font-size: 16px;
       max-width: 100%;
     }
   }

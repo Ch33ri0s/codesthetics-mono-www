@@ -46,6 +46,10 @@ export default {
     position: absolute;
     color: rgba(0, 0, 0, .02);
     font-size: 35vw;
+    bottom: 0;
+    top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     left: 10%;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
