@@ -12,7 +12,14 @@ export default {
   name: 'Contact',
   components: {
     Form
-  }
+  },
+  metaInfo: {
+    title: document.title + ' | Contact', // set a title
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined // "amp" has no value
+    }
+  },
 }
 </script>
 

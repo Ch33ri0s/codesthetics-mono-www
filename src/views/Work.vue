@@ -11,6 +11,13 @@ import Slick from 'vue-slick';
 
 export default {
   components: Slick,
+  metaInfo: {
+    title: document.title + ' | Work', // set a title
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined // "amp" has no value
+    }
+  },
   data () {
     return {
       slickOptions: {

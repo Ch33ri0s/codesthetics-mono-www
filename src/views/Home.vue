@@ -10,6 +10,13 @@
 
 export default {
   name: 'home',
+  metaInfo: {
+    title: document.title + ' | Home', // set a title
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined // "amp" has no value
+    }
+  },
   methods: {
       handleHeader() {
       var headerText = 'Tenyson C. Partridge';

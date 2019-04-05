@@ -12,7 +12,14 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  metaInfo: {
+    title: document.title + ' | About', // set a title
+    htmlAttrs: {
+      lang: 'en',
+      amp: undefined // "amp" has no value
+    }
+  },
 }
 </script>
 

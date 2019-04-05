@@ -4,8 +4,10 @@ import Home from './views/Home.vue'
 import Work from './views/Work.vue'
 import Contact from './views/Contact.vue'
 import About from './views/About.vue'
+import Meta from 'vue-meta';
 
 Vue.use(Router)
+Vue.use(Meta)
 
 export default new Router({
   routes: [
