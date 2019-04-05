@@ -38,12 +38,12 @@ export default {
     background: url('../assets/tenyson_edited.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .2;
+    opacity: .35;
     background-position: center center;
   }
   h1 {
     position: absolute;
-    color: rgba(0, 0, 0, .02);
+    color: rgba(0, 0, 0, .05);
     font-size: 35vw;
     bottom: 0;
     top: 0;
