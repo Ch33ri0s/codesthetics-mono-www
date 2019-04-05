@@ -1,10 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/"><i class="fas fa-home"></i></router-link>
-      <router-link to="/work"><i class="fas fa-image"></i></router-link>
-      <router-link to="/contact"><i class="fas fa-envelope"></i></router-link>
-      <router-link to="/about"><i class="fas fa-user"></i></router-link>
+      <router-link to="/">
+        <i class="fas fa-home"></i>
+        <h6>home</h6>
+      </router-link>
+      <router-link to="/work">
+        <i class="fas fa-image"></i>
+        <h6>work</h6>
+      </router-link>
+      <router-link to="/contact">
+        <i class="fas fa-envelope"></i>
+        <h6>contact</h6>
+      </router-link>
+      <router-link to="/about">
+        <i class="fas fa-user"></i>
+        <h6>about</h6>
+      </router-link>
     </div>
     <div class="body-wrapper">
       <transition name="slide-fade" mode="out-in">
@@ -132,12 +144,21 @@ html, body {
     height: 50px;
   }
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     color: #757575;
     position: relative;
     text-decoration: none;
     font-size: 40px;
     animation: slideTop 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    h6 {
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-top: 5px;
+    }
     &.router-link-exact-active  {
       color: lighten($color: #757575, $amount: 35%);
     }
