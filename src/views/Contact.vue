@@ -23,6 +23,7 @@ export default {
   margin: auto;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   h1 {
     position: absolute;
     color: rgba(0, 0, 0, .02);

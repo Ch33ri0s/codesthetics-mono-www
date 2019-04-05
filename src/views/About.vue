@@ -3,9 +3,10 @@
     <h1>ABOUT</h1>
     <div class="textwrapper">
       <h2>Hi! I'm Tenyson.</h2>
-      <p>A tech nerd, PC Builder, diehard developer, avid gamer, passionate designer, Utah Jazz fanatic, and I'm always striving to live a healthy lifestyle.  I love people, collaborating, and building valuable relationships.</p>
+      <p>A tech nerd, PC Builder, diehard developer, avid gamer, passionate designer, Utah Jazz fanatic, and athlete.  I enjoy working with people and creating awesome experiences for users; both visually and emotionally.</p>
     </div>
-    <div class="img-wrapper"><img src="../assets/tenyson_edited.jpg" alt="tenyson"></div>
+    <div class="img-wrapper">
+    </div>
   </div>
 </template>
 
@@ -22,6 +23,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin: auto;
   overflow: hidden;
@@ -32,13 +35,11 @@ export default {
     bottom: 0;
     right: 0;
     margin: auto;
-    width: 100%;
-    max-width: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      opacity: .2;
-    }
+    background: url('../assets/tenyson_edited.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .2;
+    background-position: center center;
   }
   h1 {
     position: absolute;
@@ -56,7 +57,7 @@ export default {
     -webkit-touch-callout: none;
   }
   .textwrapper {
-    background: rgba;
+    position: relative;
     border-radius: 20px;
     padding: 20px;
     color: white;

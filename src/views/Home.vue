@@ -38,6 +38,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   padding-left: 100px;
   display: flex;
   flex-direction: column;

@@ -81,7 +81,7 @@ export default {
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
+  transform: translateX(10%);
   opacity: 0;
 }
 
@@ -97,6 +97,8 @@ body {
 html, body {
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #app {
@@ -249,6 +251,8 @@ html, body {
 }
 
 .body-wrapper {
+  display: block;
+  position: relative;
   overflow: hidden;
   border: 5px solid #424242;
   border-radius: 20px;
