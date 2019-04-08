@@ -1,5 +1,6 @@
 <template>
   <div class="work">
+    <div class=""></div>
     <slick class="slick" ref="slick" :options="slickOptions">
       <div class="img-wrapper-one"></div>
     </slick>

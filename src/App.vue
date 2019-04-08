@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <div class="line1"></div>
+    <div class="line2"></div>
     <div id="nav">
       <router-link to="/">
         <i class="fas fa-home"></i>
@@ -26,10 +28,10 @@
     <div id="footer">
       <span>Made with <i class="fas fa-heart"></i> {{year}}</span>
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Github</a></li>
+        <li><a href="https://www.facebook.com/tenyson.partridge" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/codesthetics" target="_blank">Instagram</a></li>
+        <li><a href="https://www.twitter.com/codesthetics" target="_blank">Twitter</a></li>
+        <li><a href="https://www.github.com/ch33ri0s" target="_blank">Github</a></li>
       </ul>
     </div>
   </div>
@@ -59,6 +61,31 @@ export default {
 
 
 <style lang="scss">
+
+.line1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1vw;
+  height: 5%;
+  background: linear-gradient(to right, #FFB74D, #FF8A65);
+}
+.line2 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 0;
+  margin: auto;
+  width: 1vw;
+  height: 5%;
+  // z-index: -1;
+  background: linear-gradient(to right, #81C784, #4FC3F7);
+}
+
 @keyframes slide {
   from {
     transform: translateX(10%);
@@ -120,6 +147,7 @@ html, body {
   height: 100vh;
   padding-right: 200px;
   padding-left: 200px;
+  overflow: hidden;
   @media (max-width: 1000px) {
     padding-left: 100px;
     padding-right: 100px;

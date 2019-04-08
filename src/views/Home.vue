@@ -30,9 +30,6 @@ export default {
       }
     }
   },
-  openWindow() {
-    window.confirm('test');
-  },
   mounted() {
     this.handleHeader();
   }
@@ -68,7 +65,7 @@ export default {
 }
 
 .header {
-  animation: slide 1s ease;
+  animation: slide 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 0;
   font-weight: bold;
   font-size: 48px;
@@ -82,7 +79,7 @@ h3 {
   padding-bottom: 20px;
   font-weight: lighter;
   border-bottom: 1px solid #424242;
-  animation: slide 1s ease;
+  animation: slide 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (max-width: 730px) {
