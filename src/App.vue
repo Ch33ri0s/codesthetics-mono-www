@@ -32,6 +32,7 @@
         <li><a href="https://www.instagram.com/codesthetics" target="_blank">Instagram</a></li>
         <li><a href="https://www.twitter.com/codesthetics" target="_blank">Twitter</a></li>
         <li><a href="https://www.github.com/ch33ri0s" target="_blank">Github</a></li>
+        <li><a id="game" href="https://www.simmer.io/@Ch33ri0s/box-drop" target="_blank">BoxDrop</a></li>
       </ul>
     </div>
   </div>
@@ -234,6 +235,9 @@ html, body {
   margin: auto;
   padding-left: 2px;
   padding-right: 2px;
+  #game {
+    color: lightgray !important;
+  }
   @media (max-width: 450px) {
     justify-content: center;
     padding: 0;
@@ -241,7 +245,7 @@ html, body {
 
   span {
     color: #757575;
-    font-size: 14px;
+    font-size: 12px;
     animation: slideBottom 2s ease;
     i {
       color: #FF0266;
@@ -260,7 +264,7 @@ html, body {
       padding-left: 10px;
       padding-right: 10px;
       a {
-        font-size: 14px;
+        font-size: 12px;
         position: relative;
         font-weight: bolder;
         text-decoration: none;
@@ -273,7 +277,7 @@ html, body {
           position: absolute;
           width: 100%;
           height: 1px;
-          bottom: -10px;
+          bottom: -5px;
           left: 0;
           right: 0;
           margin-left: auto;

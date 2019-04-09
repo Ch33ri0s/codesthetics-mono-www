@@ -2,7 +2,7 @@
   <div class="about">
     <h1>ABOUT</h1>
     <div class="textwrapper">
-      <h2>Hi! I'm Tenyson.</h2>
+      <h2>Hey, I'm Tenyson.</h2>
       <p>A tech nerd, PC Builder, diehard developer, avid gamer, passionate designer, Utah Jazz fanatic, and athlete.  I enjoy working with people and creating awesome experiences for users; both visually and emotionally.</p>
     </div>
     <div class="img-wrapper">

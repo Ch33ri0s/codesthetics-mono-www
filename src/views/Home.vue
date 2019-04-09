@@ -2,6 +2,7 @@
   <div class="home">
     <span class="header"></span>
     <h3>UI/UX Developer</h3>
+    <p id="intro">Keep it simple, but make it complex.</p>
     <h1>HOME</h1>
   </div>
 </template>
@@ -10,6 +11,11 @@
 
 export default {
   name: 'home',
+  data () {
+    return {
+      gameUrl: 'https://www.simmer.io/@Ch33ri0s/boxdrop'
+    }
+  },
   metaInfo: {
     title: document.title + ' | Home', // set a title
     htmlAttrs: {
@@ -38,6 +44,14 @@ export default {
 
 <style lang="scss">
 
+#intro {
+  padding: 20px;
+  font-size: 21px;
+  padding-left: 0;
+  color: lighten($color: #424242, $amount: 5%);
+  text-align: justify;
+}
+
 .home {
   position: relative;
   width: 100%;
@@ -47,6 +61,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  .game {
+    padding: 20px;
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
   h1 {
     position: absolute;
     color: rgba(0, 0, 0, .02);
