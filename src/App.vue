@@ -72,6 +72,7 @@ export default {
   margin: auto;
   width: 1vw;
   height: 5%;
+  background: -webkit-linear-gradient(to right, #FFB74D, #FF8A65);
   background: linear-gradient(to right, #FFB74D, #FF8A65);
 }
 .line2 {
@@ -84,6 +85,7 @@ export default {
   width: 1vw;
   height: 5%;
   // z-index: -1;
+  background: -webkit-linear-gradient(to right, #FFB74D, #FF8A65);
   background: linear-gradient(to right, #81C784, #4FC3F7);
 }
 
@@ -143,6 +145,7 @@ html, body {
 
 #app {
   font-family: "t26-carbon", "Courier New", Courier, monospace;
+  background: -webkit-radial-gradient(#424242, #212121);
   background: radial-gradient(#424242, #212121);
   width: 100vw;
   height: 100vh;
@@ -282,6 +285,7 @@ html, body {
           right: 0;
           margin-left: auto;
           margin-right: auto;
+          background: -webkit-linear-gradient(to bottom right, #FFB74D, #FF8A65);
           background: linear-gradient(to bottom right, #FFB74D, #FF8A65);
           visibility: hidden;
           -webkit-transform: scaleX(0);
@@ -309,6 +313,7 @@ html, body {
   overflow: hidden;
   border: 5px solid #424242;
   border-radius: 20px;
+  background: -webkit-linear-gradient(-45deg, #23A6D5, #23D5AB);
   background: linear-gradient(-45deg, #23A6D5, #23D5AB);
   box-shadow: 0 0 30px rgba(0, 0, 0, .35);
   margin: auto;

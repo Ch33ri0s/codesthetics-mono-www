@@ -2,7 +2,7 @@
   <div class="home">
     <span class="header"></span>
     <h3>UI/UX Developer</h3>
-    <p id="intro">Keep it simple, but make it complex.</p>
+    <p id="intro">I love to create and build cool projects</p>
     <h1>HOME</h1>
   </div>
 </template>
