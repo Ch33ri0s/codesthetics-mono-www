@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <span class="header"></span>
-    <h3>UI/UX Developer</h3>
-    <p id="intro">I love to create and build cool projects</p>
+    <h3>UI/UX Engineer</h3>
+    <a id="intro" href="../assets/tenyson_portfolio.pdf">DESIGN PORTFOLIO</a>
     <h1>HOME</h1>
   </div>
 </template>
@@ -45,6 +45,8 @@ export default {
 <style lang="scss">
 
 #intro {
+  display: block;
+  z-index: 9999;
   padding: 20px;
   font-size: 21px;
   padding-left: 0;
